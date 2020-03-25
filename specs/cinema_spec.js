@@ -57,5 +57,8 @@ describe('Cinema', function () {
     const actual = cinema.totalRunTime();
     assert.strictEqual(actual, 622)
   });
-
+  it('Cinema should be able to filter films by year', function() {
+    const actual = cinema.filterByProperty('year', 2017);
+    assert.strictEqual(actual.length, 3)
+  });
 });
